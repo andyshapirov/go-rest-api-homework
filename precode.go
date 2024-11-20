@@ -51,7 +51,7 @@ func getTasks(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	w.Write(resp)
+	_, _ = w.Write(resp)
 }
 
 func postTask(w http.ResponseWriter, r *http.Request) {
@@ -97,7 +97,7 @@ func getTask(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	w.Write(resp)
+	_, _ = w.Write(resp)
 }
 
 func delTask(w http.ResponseWriter, r *http.Request) {
